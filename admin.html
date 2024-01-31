@@ -5,53 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="./adim.css">
+    <script src="./admin.js"></script>
 </head>
 
 <body>
-    <table>
-        <tr>
-            <th>Project Name</th>
-            <th>Image URL</th>
-            <th>Link</th>
-            <th>Tags</th>
-            <th>Action</th>
-        </tr>
-        <tr>
-            <td>Auto Drive Project</td>
-            <td>2</td>
-            <td>3</td>
-            <td>Angular React Jquery</td>
-            <td><button style=“color:red”>Delete</button> <button style=“color:green”>Update</button></td>
-        </tr>
-        <tr>
-            <td>Ecommerce Project</td>
-            <td>4</td>
-            <td>3</td>
-            <td>Bootstrap CSS Javascript</td>
-            <td><button style=“color:red”>Delete</button> <button style=“color:green”>Update</button></td>
-        </tr>
-        <tr>
-            <td>Chat Application</td>
-            <td>5</td>
-            <td>3</td>
-            <td>MongoDB Javascript</td>
-            <td><button style=“color:red”>Delete</button> <button style=“color:green”>Update</button></td>
-        </tr>
-        <tr>
-            <td>Social Media Platform</td>
-            <td>6</td>
-            <td>3</td>
-            <td>Vue Javascript</td>
-            <td><button style=“color:red”>Delete</button> <button style=“color:green”>Update</button></td>
-        </tr>
-        <tr>
-            <td>Image Sharing Platform</td>
-            <td>7</td>
-            <td>3</td>
-            <td>React Javascript</td>
-            <td><button style=“color:red”>Delete</button> <button style=“color:green”>Update</button></td>
-        </tr>
+    <form id="form">
+        <h2>My Projects</h2>
+        <div class="title">
+            <div class="input-group mb-3">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" placeholder="Server" aria-label="Server" id="server"
+                    style="width: 100px;">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" placeholder="Image URL" aria-label="Server" id="imageUrl"
+                    style="width: 100px;">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" placeholder="Link" aria-label="Server" id="link"
+                    style="width: 100px;">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" placeholder="Tags (Ex: React, Angular)" aria-label="Server"
+                    id="tags" style="width: 100px;">
+            </div>
+            <div><button type="submit" class="btn btn-primary" style="width: 150px;" id="add"
+                    onclick="addProject()">+New Project</button></div>
+        </div>
+    </form>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Project Name</th>
+                <th scope="col">Image URL</th>
+                <th scope="col">Link</th>
+                <th scope="col">Tags</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
     </table>
 </body>
+<script src="../css/js/admin.js"></script>
 
 </html>
